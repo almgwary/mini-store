@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, NgModel } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { MapPipe } from './pipes/map.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ProductFormReactiveComponent } from './product-form-reactive/product-form-reactive.component';
 import { DataService } from './services/data.service';
+import { ImojeInputDirective } from './imoje-input.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DataService } from './services/data.service';
     FilterComponent,
     MapPipe,
     FilterPipe,
-    ProductFormReactiveComponent
+    ProductFormReactiveComponent,
+    ImojeInputDirective
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import { DataService } from './services/data.service';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [DataService],
+  providers: [DataService, NgModel],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
