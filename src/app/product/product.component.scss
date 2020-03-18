@@ -1,0 +1,14 @@
+:host {
+    padding: 1em;
+    width: 25%;
+    text-align: center;
+    font-weight: bold;      
+    .img {
+      font-size: 3em;
+      padding: 0.5em 0;
+    }      
+    &:hover {
+      cursor: pointer;
+      background-color: lighten(blue, 35%);
+    }
+  }
