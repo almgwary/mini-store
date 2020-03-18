@@ -1,4 +1,4 @@
-<app-filter (onFilter)="selectedFilter = $event" [filters]="products | map:'category'"></app-filter>
+<app-filter (onFilter)="selectedFilter = $event" [filters]="data.products | map:'category'"></app-filter>
 <div class="products-container">
     <app-product *ngFor="let product of data.products | filter:selectedFilter "  [product]="product" ></app-product>
 </div>

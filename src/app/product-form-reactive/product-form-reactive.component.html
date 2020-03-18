@@ -17,9 +17,8 @@
 
             <div class="form-group">
                 <label for="img">Price</label>
-                <input type="number" class="form-control" id="price" placeholder="💰" formControlName="price">
-                <code > Errors: {{form['controls']['price'].errors | json}}</code>
-               
+                <input type="number" class="form-control" id="price" placeholder="price" formControlName="price">
+                <code *ngIf="form['controls']['price'].errors" > Errors: {{form['controls']['price'].errors | json}}</code>
 
             </div>
 
