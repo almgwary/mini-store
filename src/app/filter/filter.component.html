@@ -1,0 +1,6 @@
+<ul>
+    <li (click)="onClick(null)"> All</li>
+    <li *ngFor="let filter of filters" (click)="onClick(filter)">
+            {{filter}}
+    </li>
+</ul>
