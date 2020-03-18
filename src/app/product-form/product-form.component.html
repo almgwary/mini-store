@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1>Template-driven Form Example:</h1>
+        <form #f="ngForm" (ngSubmit)="submit()">
+            <p>
+                <label>Name:</label>
+                <input type="text"  
+                    name="name"
+                    [(ngModel)]="product.name" required>
+            </p>
+            <p>
+                <label>Name2:</label>
+                <input type="text"  
+                    name="name2"
+                    [ngModel]="product.name" required>
+            </p>
+            <p>
+                <label>Price:</label>
+                <input type="password"  
+                    name="price"
+                    [(ngModel)]="product.price" required>
+            </p>
+            <p>
+                <button type="submit" [disabled]="!f.valid">Submit</button>
+            </p>
+        </form>
+
+        <code>{{product | json}}</code>
+    </div>
+</div>
