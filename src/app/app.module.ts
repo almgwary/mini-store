@@ -15,6 +15,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { ProductFormReactiveComponent } from './product-form-reactive/product-form-reactive.component';
 import { DataService } from './services/data.service';
 import { ImojeInputDirective } from './imoje-input.directive';
+import { ImgDirective } from './img.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ImojeInputDirective } from './imoje-input.directive';
     MapPipe,
     FilterPipe,
     ProductFormReactiveComponent,
-    ImojeInputDirective
+    ImojeInputDirective,
+    ImgDirective
   ],
   imports: [
     BrowserModule,
