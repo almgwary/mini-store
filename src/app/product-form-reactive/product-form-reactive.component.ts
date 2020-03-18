@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../models/product';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-product-form-reactive',
@@ -14,7 +15,7 @@ export class ProductFormReactiveComponent implements OnInit {
 
   form: FormGroup;
     
-  constructor(private formBuilder: FormBuilder, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private router: Router, private data: DataService) {
      
   }
 
@@ -33,6 +34,7 @@ export class ProductFormReactiveComponent implements OnInit {
   submit(){
     console.log(this.form.value);
     this.product = this.form.value;
+    this.data.products.push(this.product)
     this.router.navigate(['/'])
   }
 
