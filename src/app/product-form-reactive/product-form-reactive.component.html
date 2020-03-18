@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-12">
+        <br>
+        <h1>Reactive Form</h1>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" formControlName="name">
+            </div>
+
+
+            <div class="form-group">
+                <label for="img">Image</label>
+                <input type="text" class="form-control" id="img" placeholder="EmoJi" formControlName="img">
+            </div>
+
+
+            <div class="form-group">
+                <label for="img">Price</label>
+                <input type="text" class="form-control" id="price" placeholder="💰" formControlName="price">
+                <code > Errors: {{form['controls']['price'].errors | json}}</code>
+               
+
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" class="form-control" id="category" placeholder="Category" formControlName="category">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary"  [disabled]="!form.valid" >Save</button> &nbsp;
+            
+            <button  class="btn btn-danger"   [disabled]="!form.dirty" (click)="reset()">Cancel</button>
+        </form>
+
+        
+        <br>
+        <code>{{product | json}}</code>
+    </div>
+</div>
+
+
